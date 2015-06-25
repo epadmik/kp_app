@@ -4,7 +4,7 @@
 	 $('form').fadeOut(500);
 	 $('.wrapper').addClass('form-success');
 
-	 window.location.href = "http://kpcheckme.azurewebsites.net/dashboard.html";
+	 window.location.href = "dashboard.html";
 
 });
 
