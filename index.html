@@ -1,10 +1,12 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="js csstransitions">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>WEBMD 2.0</title>
+  <title>KP CheckMe</title>
 
   <script src="js/modernizr.custom.97074.js"></script>
   <script src="js/jquery.min.js"></script>
@@ -15,88 +17,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.7">
   
   <!-- OWL/CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
   <!--custom fonts-->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="css/css" rel="stylesheet" type="text/css">
   
 </head>
 <body>
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="login_symptom.html">Symtom Tracker</a></li>
+    <li><a href="login_history.html">Medical History</a></li>
+  </ul>
+</nav>
 
-  <header id="headerrr" class="clear navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-scroll="" style="font-weight:lighter" href="#intro" class="tk-aw-conqueror-inline navbar-brand">
-        <img style="float: left; display: inline-block; width: 15%;" src="images/logo.png" class="img-responsive">
-      </a>
+<!--<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default">Home</button>
+</form>-->
+
+
+<div class="container-fluid home" style="padding-top:190px !important;">
+
+<div class="row">
+	<div class="col-md-1">
+	</div>
+    <div id="column1" class="col-md-4 column outer c1">
+      <div class="inner one">
+        <i class="fa fa-stethoscope fa-5x"></i>
+             <h3>Enter your symptom(s) and get connected to the right level of care.</h3>
+        <button onclick="location.href = 'login_symptom.html'" type="button" class="btn btn-lg btn-block" style="background-color:#57A635 !important;">Symptom Tracker</button>
+        <br>
     </div>
-    <div class="collapse navbar-collapse" style="background-color:white;">
-      <ul id="top-nav" class="nav navbar-nav">
-
-      <input type="button" id="login" class="btn-primary" value="Login" onclick="return change(this);" style="margin-right:10px;"/>
-      <li id="symptom" class="nav-list"><a href="#symptom">Symptom</a></li>
-      <li id="location" class="nav-list"><a href="#location">Location</a></li>
-
-<script type="text/javascript">
-function change( el )
-{
-    if ( el.value === "Login" )
-        el.value = "Logout";
-    else
-        el.value = "Login";
-}
-
- $(document).ready(function() {
- $('#location').hide(); 
- $('#symptom').hide();
-  $('#login').click(function() {
-   $('#location').show();
-   $('#symptom').show();
-   });
- });
-
-
-</script>
-
-
-
-      </ul>
     </div>
-  </header>
+    <div class="col-md-2">
+	</div>
 
-
-
-    <section style="margin-top:50px;">
-      <div style="" class="wrapper-header">
-       <div style="clear: both"></div>
-     </div>
-     <section class="top-framework">
-      <div class="cust-container">
-        <div id="column1" class="column outer col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="inner one">
-            <i class="fa fa-stethoscope fa-5x"></i>
-          <h2>Symptom</h2>
-            <button type="button" class="btn btn-primary">Symtom</button>
-
-          </div>
-        </div>
-        <div id="column2" class="column outer dot col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="inner three">
-            <i class="fa fa-map-marker fa-5x"></i>
-            <h2>Location</h2>
-              <button type="button" class="btn btn-primary">Location</button>
-
-          </div>
-        </div>
+    <div id="column2" class="col-md-4 column outer c2">
+      <div class="inner one">
+        <i class="fa fa-medkit fa-5x"></i>
+            <h3>Been here before? For recurring issues, verify your past recorded symptoms.</h3>
+          <button onclick="location.href = 'login_history.html'" type="button" class="btn btn-lg btn-block" style="background-color:#57A635 !important;">Check Medical History</button>
+          <br>
       </div>
-    </section>
+    </div>
+    <div class="col-md-1">
+	</div>
+</div>
+</div>
 
-  </body>
-  </html>
+<!-- <div class="well" style="margin-left:75px; width:45%" >Don't just be a patient... Be an active manager of your own health.
+</div> -->
+
+</body>
+</html>
