@@ -62,8 +62,8 @@
   width: 400px;
   padding-left:35px;
 	padding-right:35px;
-	padding-top:35px;
-	padding-bottom:35px;
+	padding-top:10px;
+	padding-bottom:15px;
   margin-top:20px;
   margin-left: auto;
   margin-right: auto;
@@ -76,7 +76,7 @@
   font-size: 18px;
   line-height: 22px;
   background-color: #fbfbfb;
-  padding: 13px 13px 13px 24px;
+  padding: 5px 13px 13px 24px;
 	margin-bottom: 10px;
 	width:100%;
   box-sizing: border-box;
@@ -134,9 +134,9 @@
   <nav>
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="#">About us</a></li>
-    <li><a href="login_symptom.html">Symtom Tracker</a></li>
+    <li><a href="login_symptom.html">Symptom Tracker</a></li>
     <li><a href="login_history.html">Medical History</a></li>
+    <li><a href="#">About us</a></li>
   </ul>
 </nav>
 
@@ -185,7 +185,7 @@
         <span class="onoffswitch-switch"></span>
     </label>
 </div>
-<h3 style="float:right; margin-top:-35px; color:white;">Fever</h3>
+<h3 style="float:right; margin-top:-35px; color:white;">Prolonged Fever</h3>
 
 <div class="onoffswitch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchThroat" onclick="sore_throat()">
@@ -218,29 +218,29 @@
   </div>
 
 
-<div class="form-container results" style="margin-top:50px; width:700px !important;">
+<div class="form-container results" style="margin-top:15px; width:700px !important;">
   <h3 style="text-align:center; color:white;">Preliminary Diagnosis:</h3>
   <hr>
   <input style="text-align:center;" id="results_final" type="text" name="results_final" class="input" value="" readonly/>
   <br>
     <h3 style="text-align:center; color:white;">KPCheckMe Recommends:</h3>
     <hr>
+    <h6 style="text-align:center; color:white;">Based on your medical record, you are not at risk for potential drug interactions.</h6>
      <input style="text-align:center;" id="location" type="text" name="location" class="input" value="" readonly/>
       <input style="text-align:center;" id="phone_num" type="text" name="phone_num" class="input" value="" readonly/>
-      <input type="submit" id="submit" class="input-submit" onclick="location.href = 'map.html'"value="Check Map!" />
-
+      <input type="submit" id="submit" class="input-submit" onclick="location.href = 'map.html'"value="Check Map" style="margin-bottom:5px !important;" />
+      <input type="submit" id="submit" class="input-submit" value="Book an Appointment" />
 
 
   </div>
 
 <script>
 
-
 function nasal_congestion() {
     document.getElementById('myonoffswitchNose').checked = true;
 }
 
-function cough() {
+function coughing() {
     document.getElementById('myonoffswitchCough').checked = true;
 }
 
@@ -909,7 +909,7 @@ for(i=0;i<data['KPFacilities'].length;i++){
 
 function process() {
   if(document.getElementById('myonoffswitchFever').checked || document.getElementById('myonoffswitchThroat').checked){
-    document.getElementById("results_final").value = "Consult a doctor";
+    document.getElementById("results_final").value = "Based on your symptoms, you may need to consult a doctor";
       for(i=0;i<facilities.length; i++){
     console.log(facilities[i])
   }
